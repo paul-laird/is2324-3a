@@ -49,6 +49,7 @@ def add():
     app.logger.info(s)
     cur.execute(s)
     mysql.commit()
+    return '{"Result":"Success"}'
   else:
     return render_template('add.html')
     

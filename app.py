@@ -51,8 +51,11 @@ def add():
     mysql.commit()
   else:
     return render_template('add.html')
-
-  return '{"Result":"Success"}'
+    
+@app.route("/view") #
+def view():
+    return render_template('view.html')
+  
 @app.route("/") #Default - Show Data
 def hello(): # Name of the method
   cur = mysql.cursor() #create a connection to the SQL instance

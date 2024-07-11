@@ -4,7 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>Add Item</title>
-<script>
+
+</head>
+<body>
+  <form action="/add" onsubmit="add()" method="POST">
+    <!-- This should not post - use preventDefault so as not to submit. -->
+    Name: <input type="text", name="name">
+    Email: <input type="text", name="email">
+  </form>    
+  <button type="submit" name="submit" id="sub">Add</button>
+  <script>
 
   let add=(e)=>{
     e.preventDefault();
@@ -14,13 +23,5 @@
   sub.addEventListener("click", add, false);
   sub.addEventListener("submit", add, false);
 </script>
-</head>
-<body>
-  <form action="/add" onsubmit="add()" method="POST">
-    <!-- This should not post - use preventDefault so as not to submit. -->
-    Name: <input type="text", name="name">
-    Email: <input type="text", name="email">
-    <button type="submit" name="submit" id="sub">Add</button>
-  </form>    
 </body>
 </html>

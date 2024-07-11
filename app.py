@@ -53,6 +53,17 @@ def add():
   else:
     return render_template('add.html')
     
+@app.route("/addapi/name/<name>/email/<email>", methods=['POST']) #Add Student
+def addAPI():
+
+    print(name,email)
+    cur = mysql.cursor() #create a connection to the SQL instance
+    s='''INSERT INTO students(studentName, email) VALUES('?','?');'''
+    app.logger.info(s)
+    cur.execute(s,(name,email))
+    mysql.commit()
+    return '{"Result":"Success"}'
+    
 @app.route("/view") #
 def view():
     return render_template('view.html')

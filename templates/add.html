@@ -9,8 +9,8 @@
 <body>
   <form action="/add" onsubmit="add()" method="POST">
     <!-- This should not post - use preventDefault so as not to submit. -->
-    Name: <input type="text", name="name">
-    Email: <input type="text", name="email">
+    Name: <input type="text", name="name" id="name">
+    Email: <input type="text", name="email" id="email">
   </form>    
   <button type="submit" name="submit" id="sub">Add</button>
   <script>

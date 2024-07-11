@@ -20,7 +20,8 @@
     alert("Testing: Hello world");//remove this later
     let n=document.getElementById("name").value
     let em=document.getElementById("email").value
-    fetch("https://isc.uksouth.cloudapp.azure.com:8080/addapi/name/"+n+"/email/"+em)
+    fetch("https://isc.uksouth.cloudapp.azure.com:8080/addapi/name/"+n+"/email/"+em, 
+    {method: "POST"})
       .then(resp => resp.json())
       .then(j=>{
         alert(j.Result);

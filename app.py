@@ -54,7 +54,7 @@ def add():
     return render_template('add.html')
     
 @app.route("/addapi/name/<name>/email/<email>", methods=['POST']) #Add Student
-def addAPI():
+def addAPI(name="", email="info@dbs.ie"):
 
     print(name,email)
     cur = mysql.cursor() #create a connection to the SQL instance

@@ -20,6 +20,13 @@
     alert("Testing: Hello world");//remove this later
     let n=document.getElementById("name").value
     let em=document.getElementById("email").value
+    fetch("https://isc.uksouth.cloudapp.azure.com:8080/addapi/name/"+n+"/email/"+em)
+      .then(resp => resp.json())
+      .then(j=>{
+        alert(j.Result);
+        document.getElementById("name").val('');
+        document.getElementById("email").val('');
+      }).catch(m=>alert("Error: "+m))
     alert(n+em);
   }
   const sub = document.getElementById("sub");

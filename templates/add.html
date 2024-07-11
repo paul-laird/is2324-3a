@@ -16,7 +16,7 @@
 </script>
 </head>
 <body>
-  <form action="/add" method="POST">
+  <form action="/add" onsubmit="add()" method="POST">
     <!-- This should not post - use preventDefault so as not to submit. -->
     Name: <input type="text", name="name">
     Email: <input type="text", name="email">

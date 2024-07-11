@@ -17,7 +17,10 @@
 
   let add=(e)=>{
     e.preventDefault();
-    alert("Testing: Hello world");
+    alert("Testing: Hello world");//remove this later
+    let n=document.getElementById("name").value
+    let e=document.getElementById("email").value
+    alert(n+e);
   }
   const sub = document.getElementById("sub");
   sub.addEventListener("click", add, false);
